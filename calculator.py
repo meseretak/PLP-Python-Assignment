@@ -1,23 +1,25 @@
-# Ask user for input
-num1 = float(input("Enter the first number: "))
-op = input("Enter an operation (+, -, *, /): ")
-num2 = float(input("Enter the second number: "))
+# Step 1: Create an empty list
+my_list = []
 
-# Perform calculation based on the operation
-if op == '+':
-    result = num1 + num2
-    print(f"{num1} + {num2} = {result}")
-elif op == '-':
-    result = num1 - num2
-    print(f"{num1} - {num2} = {result}")
-elif op == '*':
-    result = num1 * num2
-    print(f"{num1} * {num2} = {result}")
-elif op == '/':
-    if num2 != 0:
-        result = num1 / num2
-        print(f"{num1} / {num2} = {result}")
-    else:
-        print("Error: Division by zero is not allowed.")
-else:
-    print("Invalid operation. Please choose +, -, *, or /.")
+# Step 2: Append elements 10, 20, 30, 40
+my_list.append(10)
+my_list.append(20)
+my_list.append(30)
+my_list.append(40)
+
+# Step 3: Insert 15 at the second position (index 1)
+my_list.insert(1, 15)
+
+# Step 4: Extend my_list with [50, 60, 70]
+my_list.extend([50, 60, 70])
+
+# Step 5: Remove the last element
+my_list.pop()
+
+# Step 6: Sort in ascending order
+my_list.sort()
+
+# Step 7: Find and print index of 30
+index_30 = my_list.index(30)
+print("Final List:", my_list)
+print("Index of 30:", index_30)
